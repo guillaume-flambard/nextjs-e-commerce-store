@@ -24,7 +24,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       `,
           className
         )}
-        type="button"
         ref={ref}
         {...props}
       >
