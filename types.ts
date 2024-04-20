@@ -14,9 +14,9 @@ export interface Product {
   id: string;
   category: Category;
   name: string;
-  price: number;
+  price: Price;
   isFeatured: boolean;
-  size: string;
+  size: Size;
   color: Color;
   images: Image[];
 }
@@ -36,4 +36,9 @@ export interface Color {
   id: string;
   name: string;
   value: string;
+}
+
+export interface Price {
+  id: string;
+  value: number;
 }
