@@ -8,16 +8,18 @@ import { useState, useEffect } from "react";
 interface CartPageProps {}
 
 const CartPage: React.FC<CartPageProps> = ({}) => {
-  const cart = useCart();
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
+  const cart = useCart();
+
   if (!isMounted) {
     return null;
   }
+
   return (
     <div className="bg-white">
       <Container>

@@ -1,12 +1,17 @@
 import { cn } from "@/lib/utils";
 import { forwardRef } from "react";
 
-interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {}
+interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+  children: React.ReactNode;
+  disabled?: boolean;
+  className?: string;
+}
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, children, ...props }, ref) => {
+  ({ className, children, disabled, ...props }, ref) => {
     return (
       <button
+        disabled={disabled}
         className={cn(
           `
       w-auto
