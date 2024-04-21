@@ -31,7 +31,6 @@ const useCart = create(
       },
       removeAll: () => {
         set({ items: [] });
-        toast.success("All items removed from cart.");
       },
     }),
     {

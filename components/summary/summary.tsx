@@ -17,6 +17,8 @@ const Summary: React.FC<SummaryProps> = ({}) => {
 
   useEffect(() => {
     if (searchParams.get("success")) {
+      console.log(searchParams.get("success"));
+
       toast.success("Payment completed.");
       removeAll();
     }

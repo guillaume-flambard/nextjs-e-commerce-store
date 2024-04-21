@@ -20,7 +20,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
   const cart = useCart();
 
   const handleClick = () => {
-    router.push(`/products/${data?.id}`);
+    router.push(`/products/${data.id}`);
   };
 
   const previewModal = usePreviewModal();
@@ -44,7 +44,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
     >
       <div className="aspect-square rounded-xl bg-gray-100 relative">
         <Image
-          src={data?.images?.[0]?.url}
+          src={data.images?.[0]?.url}
           fill
           alt="image"
           className="aspect-square object-cover rounded-md"
@@ -63,11 +63,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
         </div>
       </div>
       <div>
-        <p className="font-semibold text-lg">{data?.name}</p>
-        <p className="text-gray-500 text-sm">{data?.category?.name}</p>
+        <p className="font-semibold text-lg">{data.name}</p>
+        <p className="text-gray-500 text-sm">{data.category.name}</p>
       </div>
       <div className="flex items-center justify-between">
-        <Currency value={data?.price.value} />
+        <Currency value={data.price} />
       </div>
     </div>
   );
