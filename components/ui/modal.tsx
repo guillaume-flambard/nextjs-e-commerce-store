@@ -31,9 +31,13 @@ const Modal: React.FC<ModalProps> = ({ open, onClose, children }) => {
                 as="div"
                 className="w-full max-w-3xl overflow-hidden rounded-lg text-left align-middle"
               >
-                <div className="relative flex w-full items-center overflow-hidden bg-white px-4 pb-8 pt-14 shadow-2xl sm:pt-8 md:p-6 lg:p-8">
+                <div className="relative flex w-full items-center overflow-hidden bg-white dark:bg-slate-800 dark:text-white px-4 pb-8 pt-14 shadow-2xl sm:pt-8 md:p-6 lg:p-8">
                   <div className="absolute top-4 right-4">
-                    <IconButton onClick={onClose} icon={<X size={15} />} />
+                    <IconButton
+                      className="dark:bg-slate-500 dark:text-white"
+                      onClick={onClose}
+                      icon={<X className="!dark:text-white" size={15} />}
+                    />
                   </div>
                   {children}
                 </div>

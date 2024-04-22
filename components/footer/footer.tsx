@@ -2,9 +2,9 @@ import { ModeToggle } from "../toggler/theme-toggler";
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t py-10">
+    <footer className="border-t py-10">
       <div className="mx-auto py-10">
-        <div className="text-center text-xs text-black">
+        <div className="text-center text-xs ">
           &copy; 2024 Store. All rights reserved.
         </div>
       </div>

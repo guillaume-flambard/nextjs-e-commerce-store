@@ -4,6 +4,7 @@ import type { Color, Size } from "@/types";
 import { Dialog } from "@headlessui/react";
 import { Plus, X } from "lucide-react";
 import { useState } from "react";
+
 import Button from "../button";
 import IconButton from "../ui/icon-button";
 import Filter from "./filter";
@@ -34,7 +35,7 @@ const MobileFilter: React.FC<MobileFilterProps> = ({ sizes, colors }) => {
         <div className="fixed inset-0 z-40 flex">
           <Dialog.Panel
             className={
-              "relative transition-all ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white py-4 pb-6 shadow-xl"
+              "relative transition-all ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white dark:bg-slate-800 py-4 pb-6 shadow-xl"
             }
           >
             <div className="flex items-center justify-end px-4">
