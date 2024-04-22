@@ -1,3 +1,5 @@
+import { ModeToggle } from "../toggler/theme-toggler";
+
 const Footer = () => {
   return (
     <footer className="bg-white border-t py-10">
@@ -5,6 +7,9 @@ const Footer = () => {
         <div className="text-center text-xs text-black">
           &copy; 2024 Store. All rights reserved.
         </div>
+      </div>
+      <div className="fixed bottom-1 right-1">
+        <ModeToggle />
       </div>
     </footer>
   );

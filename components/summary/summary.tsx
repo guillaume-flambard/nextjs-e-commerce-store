@@ -5,7 +5,7 @@ import axios from "axios";
 import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import toast from "react-hot-toast";
-import Button from "../ui/button";
+import Button from "../button";
 import Currency from "../ui/currency";
 
 const Summary = () => {

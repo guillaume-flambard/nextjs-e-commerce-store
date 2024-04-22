@@ -4,7 +4,7 @@ import useCart from "@/hooks/use-cart";
 import { ShoppingBag } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import Button from "../ui/button";
+import Button from "../button";
 
 const NavbarActions = () => {
   const cart = useCart();
