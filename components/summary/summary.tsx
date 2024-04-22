@@ -1,16 +1,14 @@
 "use client";
 
 import useCart from "@/hooks/use-cart";
-import Button from "../ui/button";
-import Currency from "../ui/currency";
-import { useSearchParams } from "next/navigation";
 import axios from "axios";
+import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import toast from "react-hot-toast";
+import Button from "../ui/button";
+import Currency from "../ui/currency";
 
-interface SummaryProps {}
-
-const Summary: React.FC<SummaryProps> = ({}) => {
+const Summary = () => {
   const searchParams = useSearchParams();
   const items = useCart((state) => state.items);
   const removeAll = useCart((state) => state.removeAll);

@@ -1,14 +1,14 @@
 "use client";
 
+import useCart from "@/hooks/use-cart";
+import usePreviewModal from "@/hooks/use-preview-modal";
 import type { Product } from "@/types";
-import Image from "next/image";
-import IconButton from "../ui/icon-button";
 import { Expand, ShoppingBag } from "lucide-react";
-import Currency from "../ui/currency";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import type { MouseEventHandler } from "react";
-import usePreviewModal from "@/hooks/use-preview-modal";
-import useCart from "@/hooks/use-cart";
+import Currency from "../ui/currency";
+import IconButton from "../ui/icon-button";
 
 interface ProductCardProps {
   data: Product;

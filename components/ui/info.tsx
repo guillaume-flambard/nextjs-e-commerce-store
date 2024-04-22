@@ -1,9 +1,9 @@
 "use client";
 
 import type { Product } from "@/types";
-import Currency from "./currency";
-import Button from "./button";
 import { ShoppingCart } from "lucide-react";
+import Button from "./button";
+import Currency from "./currency";
 
 interface InfoProps {
   data: Product;

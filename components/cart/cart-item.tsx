@@ -1,9 +1,9 @@
-import type { Product } from "@/types";
-import Image from "next/image";
-import IconButton from "../ui/icon-button";
-import { X } from "lucide-react";
-import Currency from "../ui/currency";
 import useCart from "@/hooks/use-cart";
+import type { Product } from "@/types";
+import { X } from "lucide-react";
+import Image from "next/image";
+import Currency from "../ui/currency";
+import IconButton from "../ui/icon-button";
 
 interface CartItemProps {
   data: Product;

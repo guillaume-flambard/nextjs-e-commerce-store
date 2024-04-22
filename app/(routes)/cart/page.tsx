@@ -3,7 +3,7 @@ import CartItem from "@/components/cart/cart-item";
 import Summary from "@/components/summary/summary";
 import Container from "@/components/ui/container";
 import useCart from "@/hooks/use-cart";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const CartPage = () => {
   const [isMounted, setIsMounted] = useState(false);

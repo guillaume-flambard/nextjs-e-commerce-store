@@ -1,10 +1,10 @@
-import type { Metadata } from "next";
-import { Urbanist } from "next/font/google";
-import "./globals.css";
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 import ModalProvider from "@/providers/modal-provider";
 import ToastProvider from "@/providers/toast-provider";
+import type { Metadata } from "next";
+import { Urbanist } from "next/font/google";
+import "./globals.css";
 
 const font = Urbanist({ subsets: ["latin"] });
 

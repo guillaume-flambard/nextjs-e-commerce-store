@@ -1,11 +1,10 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import type { Color, Size } from "@/types";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import qs from "query-string";
 import Button from "../ui/button";
-import { cn } from "@/lib/utils";
-import { useEffect, type ChangeEvent, type MouseEvent } from "react";
 
 interface FilterProps {
   valueKey: string;
