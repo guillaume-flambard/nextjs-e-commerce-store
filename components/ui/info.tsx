@@ -16,7 +16,6 @@ const Info: React.FC<InfoProps> = ({ data }) => {
 
   const addToCart: MouseEventHandler<HTMLButtonElement> = (event) => {
     event.stopPropagation();
-    console.log(data);
 
     cart.addItem(data);
   };

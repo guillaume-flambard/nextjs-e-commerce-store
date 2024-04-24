@@ -32,6 +32,11 @@ const CatgeoryPage: React.FC<CategoryPageProps> = async ({
   const sizes = await getSizes();
   const colors = await getColors();
   const category = await getCategory(params.categoryId);
+
+  const filteredProducts = products.filter(
+    (product) => product.category.id === params.categoryId
+  );
+
   return (
     <Container>
       <Billboard data={category.billboard} />
@@ -43,10 +48,10 @@ const CatgeoryPage: React.FC<CategoryPageProps> = async ({
             <Filter valueKey="colorId" name="Colors" data={colors} />
           </div>
           <div className="mt-6 lg:col-span-4 lg:mt-0">
-            {products.length === 0 && <NoResults />}
+            {filteredProducts.length === 0 && <NoResults />}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              {products.map((product) => (
-                <ProductCard key={product.id} data={product} />
+              {filteredProducts.map((product) => (
+                <ProductCard key={product.category.id} data={product} />
               ))}
             </div>
           </div>
