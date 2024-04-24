@@ -28,6 +28,7 @@ const Summary = () => {
     const response = await axios.post(
       `${process.env.NEXT_PUBLIC_API_URL}/checkout`,
       {
+        headers: { "Content-Type": "application/json" },
         productIds: items.map((item) => item.id),
       }
     );
