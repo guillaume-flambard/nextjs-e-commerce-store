@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# E-Commerce Store 🛍️
 
-## Getting Started
+(You can see the Store at my other repo [HERE](https://github.com/guillaume-flambard/nextjs-e-commerce-store))
 
-First, run the development server:
+`E-commerce Store` is a starter template made with Next.js 14, allowing you to quickly create an e-commerce Store interface.
+
+---
+<div style="display:flex;">
+    <img style:"border-radius:10px;" src="public/product.png" alt="e-commerce-store" width="350" height="auto" >
+    <img style:"border-radius:10px;" src="public/checkout.png" alt="e-commerce-store" width="350" height="auto" >
+</div>
+
+## 🤔 Why use E-Commerce Store
+
+`E-Commerce Store`
+
+## 🚀 Quick Start
+
+### 🛠 Install dependencies
+
+### 1.Use NPM ( Recommend )
+
+```bash
+npm install
+```
+
+### 2.Build
+
+```bash
+npm run build
+```
+
+### 3.Start the server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ☔️ Dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [Next.js 14](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [ShadcnUI](https://shadcn.github.io/)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### ⚙️ Configuration
 
-## Learn More
+To configure the project, create a `.env.local` file in the root directory and add the following environment variables:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+NEXT_PUBLIC_API_URL=http://localhost:3000/api/your-billboard-id # The URL of the API server (default: http://localhost:3000/api/billboard)
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🙃 Start managing your e-commerce
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+(Be sure to have the [E-Commerce Admin](https://github.com/guillaume-flambard/nextjs-e-commerce-admin) running)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Navigate to the store dashboard at `localhost:3001/`
+- Use the provided interfaces to manage products, orders, and customer inquiries.
