@@ -1,22 +1,30 @@
-# Dockerfile for E-commerce Store
-FROM node:18
+FROM node:18-alpine AS build
 
-# Create app directory
-WORKDIR /usr/src/app
+RUN apk add --no-cache g++ make py3-pip libc6-compat
 
-# Install app dependencies
-COPY package*.json ./
+WORKDIR /app
+
+COPY package.json package-lock.json ./
 
 RUN npm install
 
-# Copy app source code
 COPY . .
 
-# Build the app
 RUN npm run build
 
-# Expose the port the app runs on
-EXPOSE 3001
+FROM node:18-alpine
 
-# Start the app
-CMD ["npm", "run" , "dev"]
+WORKDIR /app
+
+COPY --from=build /app/public ./public
+COPY --from=build /app/package.json ./package.json
+COPY --from=build /app/.next/standalone ./
+COPY --from=build /app/.next/static ./.next/static
+COPY --from=build /app/node_modules ./node_modules
+
+ENV PORT=3001
+
+EXPOSE $PORT
+
+CMD ["npm", "run", "dev"]
+
